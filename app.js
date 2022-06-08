@@ -23,90 +23,90 @@ let questionsHTML = [
         },
         "right_answer": "D"
     },
-    // {
-    //     "id": "3",
-    //     "category": "HTML",
-    //     "question": "Wofür steht HTML?",
-    //     "answers": {
-    //         "A": "Antwort 1",
-    //         "B": "Antwort 2",
-    //         "C": "HTML steht für Hypertext Markup Language.",
-    //         "D": "Antwort 4"
-    //     },
-    //     "right_answer": "C"
-    // },
-    // {
-    //     "id": "4",
-    //     "category": "HTML",
-    //     "question": "Wofür steht HTML?",
-    //     "answers": {
-    //         "A": "Antwort 1",
-    //         "B": "Antwort 2",
-    //         "C": "HTML steht für Hypertext Markup Language.",
-    //         "D": "Antwort 4"
-    //     },
-    //     "right_answer": "C"
-    // },
-    // {
-    //     "id": "5",
-    //     "category": "HTML",
-    //     "question": "Wofür steht HTML?",
-    //     "answers": {
-    //         "A": "Antwort 1",
-    //         "B": "Antwort 2",
-    //         "C": "HTML steht für Hypertext Markup Language.",
-    //         "D": "Antwort 4"
-    //     },
-    //     "right_answer": "C"
-    // },
-    // {
-    //     "id": "6",
-    //     "category": "HTML",
-    //     "question": "Wofür steht HTML?",
-    //     "answers": {
-    //         "A": "Antwort 1",
-    //         "B": "Antwort 2",
-    //         "C": "HTML steht für Hypertext Markup Language.",
-    //         "D": "Antwort 4"
-    //     },
-    //     "right_answer": "C"
-    // },
-    // {
-    //     "id": "7",
-    //     "category": "HTML",
-    //     "question": "Wofür steht HTML?",
-    //     "answers": {
-    //         "A": "Antwort 1",
-    //         "B": "Antwort 2",
-    //         "C": "HTML steht für Hypertext Markup Language.",
-    //         "D": "Antwort 4"
-    //     },
-    //     "right_answer": "C"
-    // },
-    // {
-    //     "id": "8",
-    //     "category": "HTML",
-    //     "question": "Wofür steht HTML?",
-    //     "answers": {
-    //         "A": "Antwort 1",
-    //         "B": "Antwort 2",
-    //         "C": "HTML steht für Hypertext Markup Language.",
-    //         "D": "Antwort 4"
-    //     },
-    //     "right_answer": "C"
-    // },
-    // {
-    //     "id": "9",
-    //     "category": "HTML",
-    //     "question": "Wofür steht HTML?",
-    //     "answers": {
-    //         "A": "Antwort 1",
-    //         "B": "Antwort 2",
-    //         "C": "HTML steht für Hypertext Markup Language.",
-    //         "D": "Antwort 4"
-    //     },
-    //     "right_answer": "C"
-    // },
+    {
+        "id": "3",
+        "category": "HTML",
+        "question": "Wofür steht HTML?",
+        "answers": {
+            "A": "Antwort 1",
+            "B": "Antwort 2",
+            "C": "HTML steht für Hypertext Markup Language.",
+            "D": "Antwort 4"
+        },
+        "right_answer": "C"
+    },
+    {
+        "id": "4",
+        "category": "HTML",
+        "question": "Wofür steht HTML?",
+        "answers": {
+            "A": "Antwort 1",
+            "B": "Antwort 2",
+            "C": "HTML steht für Hypertext Markup Language.",
+            "D": "Antwort 4"
+        },
+        "right_answer": "C"
+    },
+    {
+        "id": "5",
+        "category": "HTML",
+        "question": "Wofür steht HTML?",
+        "answers": {
+            "A": "Antwort 1",
+            "B": "Antwort 2",
+            "C": "HTML steht für Hypertext Markup Language.",
+            "D": "Antwort 4"
+        },
+        "right_answer": "C"
+    },
+    {
+        "id": "6",
+        "category": "HTML",
+        "question": "Wofür steht HTML?",
+        "answers": {
+            "A": "Antwort 1",
+            "B": "Antwort 2",
+            "C": "HTML steht für Hypertext Markup Language.",
+            "D": "Antwort 4"
+        },
+        "right_answer": "C"
+    },
+    {
+        "id": "7",
+        "category": "HTML",
+        "question": "Wofür steht HTML?",
+        "answers": {
+            "A": "Antwort 1",
+            "B": "Antwort 2",
+            "C": "HTML steht für Hypertext Markup Language.",
+            "D": "Antwort 4"
+        },
+        "right_answer": "C"
+    },
+    {
+        "id": "8",
+        "category": "HTML",
+        "question": "Wofür steht HTML?",
+        "answers": {
+            "A": "Antwort 1",
+            "B": "Antwort 2",
+            "C": "HTML steht für Hypertext Markup Language.",
+            "D": "Antwort 4"
+        },
+        "right_answer": "C"
+    },
+    {
+        "id": "9",
+        "category": "HTML",
+        "question": "Wofür steht HTML?",
+        "answers": {
+            "A": "Antwort 1",
+            "B": "Antwort 2",
+            "C": "HTML steht für Hypertext Markup Language.",
+            "D": "Antwort 4"
+        },
+        "right_answer": "C"
+    },
     {
         "id": "10",
         "category": "HTML",
@@ -121,26 +121,33 @@ let questionsHTML = [
     }
 ]
 
+let rightQuestions = 0;
 let currentQuestion = 0;
+let AUDIO_SUCCESS = new Audio('audio/success.mp3');
+let AUDIO_FAIL = new Audio('audio/fail.mp3');
 
 function init() {
     
-    //startScreen();
+    startScreen();
     //endScreen();
-    renderMainCard();
+    //renderMainCard();
 }
 
 function startScreen() {
-    let startScreen = document.getElementById("start_screen");
+    let startScreen = document.getElementById("mainCard");
     startScreen.innerHTML = "";
 
     startScreen.innerHTML = /*html*/ `
         <h1>Herzlich Willkommen!</h1>
         <span>Quiz starteten ...</span>
-        <button id="start_btn" class="btn btn-primary btn-lg" role="button">
+        <button onclick="start()" id="start_btn" class="btn btn-primary btn-lg" role="button">
         Jetzt starten
         </button>
     `;
+}
+
+function start() {
+    renderMainCard();
 }
 
 function renderMainCard() {
@@ -155,6 +162,9 @@ function renderMainCard() {
         mainCard.innerHTML = ""; 
 
         mainCard.innerHTML = /*html*/ `
+            <div class="progress">
+                <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+            </div>
             <div id="question" class="jumbotron" >
                 <h2>Frage <span id="qno">${question['id']}</span></h2>
                 <div class="mb-4">${question['question']}</div>
@@ -183,21 +193,30 @@ function renderMainCard() {
         `;
         document.getElementById('all-questions').innerHTML = questionsHTML.length;
         document.getElementById('questionNumber').innerHTML = currentQuestion + 1;
+
+        let percent = (currentQuestion + 1) / questionsHTML.length;
+        percent = Math.round(percent * 100);
+
+        document.getElementById('progress-bar').innerHTML = `${percent}%`;
+        document.getElementById('progress-bar').style = `width: ${percent}%`;
     }
 }
 
 function answer(selection) {
     let question = questionsHTML[currentQuestion]; // currentQuestion = 0. s.Oben
 
-    let selectedQuestionNumber = selection.slice(-1); // letztes Zeichen aus dem String selection (onclick(parameter))
+    let selectedQuestionLetter = selection.slice(-1); // letztes Zeichen aus dem String selection (onclick(parameter))
 
     let idOfRightAnswer = `answer_${question['right_answer']}`;
 
-    if (selectedQuestionNumber == question['right_answer']) { // Vergleich
+    if (selectedQuestionLetter == question['right_answer']) { // Vergleich
+        rightQuestions++;
         document.getElementById(selection).classList.add('bg-success');
+        AUDIO_SUCCESS.play();
     } else {
         document.getElementById(selection).classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).classList.add('bg-success');
+        AUDIO_FAIL.play();
     }
     document.getElementById('nextButton').disabled = false;
 }
@@ -222,8 +241,6 @@ function resetAnswerButtons() {
 }
 
 function endScreen() {
-
-    //document.getElementById("over").classList.remove('hidden');
     document.getElementById("mainCard").innerHTML = "";
 
     document.getElementById("mainCard").innerHTML = /*html*/ `
@@ -235,21 +252,21 @@ function endScreen() {
         </div>
         <h1>Das Quiz ist vorbei!</h1>
         <div id="points">
-        Dein Punktestand ist: <span id="endpoints">0</span> von
-        <span id="possiblepoints"></span>
+            Dein Punktestand ist: <b id='endpoints'>0</b> von
+            <b id="possiblepoints">0</b>
+        </div>
         <button onclick="restart()" class="restart btn btn-primary btn-lg" role="button">
             Nochmal starten
         </button>
     `;
-    allPoints();
+    document.getElementById('possiblepoints').innerHTML = questionsHTML.length;
+    document.getElementById('endpoints').innerHTML = rightQuestions;
 }
 
 function restart() {
     document.getElementById("mainCard").innerHTML = "";
-    let currentQuestion = 0;
+    currentQuestion = 0;
+    rightQuestions = 0;
     renderMainCard();
 }
 
-function allPoints() {
-    document.getElementById('possiblepoints').innerHTML = questionsHTML.length;
-}
