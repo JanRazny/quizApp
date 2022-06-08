@@ -94,10 +94,62 @@ body {
     margin-bottom: 10px;
 }
 
+.card:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.bg-success {
+    background-color: yellowgreen !important;
+    color: black !important;
+}
+
+.bg-success, .bg-danger {
+    color: white;
+}
+
 .bottomCard {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+}
+
+#mainCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainCard img {
+    width: 50px;
+    height: auto;
+}
+
+#trophy {
+    position: relative;
+    width: 500px;
+}
+
+#trophy img {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 70px;
+    height: auto;
+}
+
+#result img {
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+#points {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
